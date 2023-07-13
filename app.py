@@ -27,5 +27,8 @@ def radix_sort_letters(array, max_col = None):
 
   return array
 
-lst = ['aa', 'a', 'ab', 'abs', 'asd', 'avc', 'axy', 'abid']
-print(radix_sort_letters(lst))
+
+
+if __name__ == '__main__':
+    lst = ['aa', 'a', 'ab', 'abs', 'asd', 'avc', 'axy', 'abid']
+    print(radix_sort_letters(lst))
