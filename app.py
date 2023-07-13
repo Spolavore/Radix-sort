@@ -51,19 +51,29 @@ if __name__ == '__main__':
       # Cria e escreve as palavras ordenadas
       with open('frankenstein_sorted.txt', 'w') as file:
           for i in range(0, len(output)):
-              file.write(f'{output[i]}\n')
+              if(i != len(output) - 1):
+                file.write(f'{output[i]}\n')
+              else:
+                file.write(f'{output[i]}')
 
       # Cria e escreve o outPut das frequencia das palavras ordenadas
       with open('frankenstein_counted.txt', 'w') as file:
             chaves = list(rankedWords.keys())
             for i in range(0, len(chaves)):
-                file.write(f'{chaves[i]} {rankedWords[chaves[i]]}\n')
-
+                if(i != len(chaves) - 1):
+                    file.write(f'{chaves[i]} {rankedWords[chaves[i]]}\n')
+                else: 
+                    file.write(f'{chaves[i]} {rankedWords[chaves[i]]}')
+                    
       # Cria e escreve o frankestein_ranked
       with open('frankenstein_ranked.txt', 'w') as file:
   
             for i in range(0, 1000):
-                file.write(f'{rankedWordsOrr[i][0]} {rankedWordsOrr[i][1]}\n')
+                if(i != 999):
+                    file.write(f'{rankedWordsOrr[i][0]} {rankedWordsOrr[i][1]}\n')
+                else:
+                    file.write(f'{rankedWordsOrr[i][0]} {rankedWordsOrr[i][1]}')
+
 
     elif(fileToRead == 2):
       with open('war_and_peace.txt', 'r') as file:
@@ -76,18 +86,29 @@ if __name__ == '__main__':
       # Cria e escreve as palavras ordenadas
       with open('war_and_peace_sorted.txt', 'w') as file:
           for i in range(0, len(output)):
-              file.write(f'{output[i]}\n')    
+              if(i != len(output) - 1):
+                file.write(f'{output[i]}\n')
+              else:
+                file.write(f'{output[i]}')
+                  
 
       # Cria e escreve o outPut das frequencia das palavras ordenadas
       with open('war_and_peace_counted.txt', 'w') as file:
             chaves = list(rankedWords.keys())
             for i in range(0, len(chaves)):
-                file.write(f'{chaves[i]} {rankedWords[chaves[i]]}\n')
+                if(i != len(chaves) - 1):
+                    file.write(f'{chaves[i]} {rankedWords[chaves[i]]}\n')
+                else:
+                    file.write(f'{chaves[i]} {rankedWords[chaves[i]]}')
+
       # Cria e escreve o war_and_peace_ranked.txt
       with open('war_and_peace_ranked.txt', 'w') as file:
             for i in range(0, 1000):
-                file.write(f'{rankedWordsOrr[i][0]} {rankedWordsOrr[i][1]}\n')
-
+                if(i != 999):
+                    file.write(f'{rankedWordsOrr[i][0]} {rankedWordsOrr[i][1]}\n')
+                else:
+                    file.write(f'{rankedWordsOrr[i][0]} {rankedWordsOrr[i][1]}')
+                    
     else:
         print('Comando indiposnível')
 
