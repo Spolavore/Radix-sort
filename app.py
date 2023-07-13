@@ -24,7 +24,7 @@ def msd_sort(strings, start, length):
 
     return sorted_strings
 
-
+# funcao para contar a frequencia de cada palavra
 def countWords(arr):
     hash = {}
     for i in range(0, len(arr)):
@@ -68,7 +68,7 @@ if __name__ == '__main__':
     elif(fileToRead == 2):
       with open('war_and_peace.txt', 'r') as file:
         res = file.read()
-        res = res.split()
+        res = res.split(' ')
         output = radix_sort_msd(res)
         rankedWords = countWords(output)
         rankedWordsOrr = sorted(rankedWords.items(), key=lambda x:x[1], reverse=True)
